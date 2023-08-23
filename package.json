@@ -1,0 +1,17 @@
+{
+  "name": "perfezione",
+  "version": "1.0.0",
+  "description": "Market",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jesse Iber",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "gsap": "^3.12.2",
+    "split-text-js": "^1.0.3"
+  }
+}
