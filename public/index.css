@@ -42,11 +42,11 @@ h3{
     font-family: Copperplate;
 }
 
-.hero_container{
+.hero_container, .rotate3DHero{
     display: flex;
     flex-direction: column;
-    align-items: end;
-    transform: rotate3d(180, 100, -129, 61deg);
+    align-items: center;
+    /* transform: rotate3d(180, 100, -129, 61deg); */
 }
 
 .full_container{
@@ -84,6 +84,10 @@ h3{
 #nameLogo, #nameLogo2{
     transform: translateX(100%);
     animation: txtAppear 1.4s ease-out forwards;
+}
+
+.rotate3DHero{
+    transform: rotate3d(180, 100, -129, 61deg);
 }
 
 .logo{
@@ -146,13 +150,8 @@ h3{
 }
 
 .wrap {
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
     margin: auto;
-    height: 310px;
+    transform: rotate3d(180, 100, -129, 61deg) rotatex(-70deg);
   }
   
   a {
@@ -204,7 +203,7 @@ h3{
     position: relative;
     float: left;
     height: 110px;
-    width: 100px;
+    width: 75px;
     margin-right: 10px;
     background-color: #fff;
     border-radius: 8px;
@@ -330,7 +329,14 @@ h3{
     h1 {
         font-size: 13vw;
     }
-    p {
+    .minLogo {
         font-size: 26px;
+    }
+    .scroll{
+        bottom: 10%;
+    }
+    .scroll > svg {
+        width: 50px;
+        height: 70px;
     }
 }
