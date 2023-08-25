@@ -345,12 +345,12 @@ a {
     }
 
     .countdown .figure {
-        width: 10vw;
-        height: 13vw;
+        width: 8vw;
+        height: 10vw;
     }
 
     .countdown .figure>span {
-        font: bold 10vw Roboto;
+        font: bold 8vw Roboto;
     }
 
     .minLogo {
