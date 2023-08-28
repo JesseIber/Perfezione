@@ -139,3 +139,32 @@ var Countdown = {
 
 // Let's go!
 Countdown.init();
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+let scrollTween;
+
+function goToSection(i) {
+    scrollTween = gsap.to(window, {
+        scrollTo: { y: i * innerHeight, autoKill: false },
+        duration: 1,
+        onComplete: () => scrollTween = null,
+        overwrite: true
+    });
+}
+
+gsap.utils.toArray(".panel").forEach((panel, i) => {
+    ScrollTrigger.create({
+        trigger: panel,
+        start: "top bottom-=2",
+        end: () => "+=" + (window.innerHeight * 2 - 4),
+        onToggle: self => self.isActive && !scrollTween && goToSection(i)
+    });
+});
+
+window.addEventListener("wheel", cancelWhenTweening, { passive: false });
+window.addEventListener("scroll", cancelWhenTweening, { passive: false });
+function cancelWhenTweening(e) {
+    scrollTween && e.preventDefault();
+}
