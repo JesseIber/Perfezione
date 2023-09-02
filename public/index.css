@@ -70,10 +70,10 @@ h1{
 /* min screen */
 @media (max-width: 768px) {
     .logoImg{
-        height: 95vw;
+        height: 120vw;
     }
     .logoTxt {
-        font-size: 11vw;
+        font-size: 13vw;
     }
 }
  
