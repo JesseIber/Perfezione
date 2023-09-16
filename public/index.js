@@ -1,3 +1,15 @@
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin);
+
+let sections = gsap.utils.toArray(".snappoint");
+
+function goToSection(i) {
+    gsap.to(window, {
+        scrollTo: { y: i * innerHeight, autoKill: false, ease: "Power3.easeInOut" },
+        duration: 0.3
+    });
+}
+
 window.scroll(
     gsap.to('.hscrollLogo', {
         xPercent: -100,
