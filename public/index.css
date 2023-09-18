@@ -43,16 +43,18 @@ body {
     width: 100%;
     height: 100vh;
     position: relative;
+    overflow-x: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .logoImg{
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     object-fit: contain;
+    z-index: 1;
 }
 
 h1{
@@ -61,7 +63,7 @@ h1{
 }
 
 .MinLogo{
-    position: absolute;
+    position: fixed;
     top: 4%;
     left: 4%;
     font-family: Copperplate;
@@ -73,7 +75,8 @@ h1{
 }
 
 .logoTxt{
-    z-index: 1;
+    position: fixed;
+    z-index: 2;
     font-size: 110px;
 }
 
@@ -101,6 +104,19 @@ h1{
     top:50%;
     transform:translate(-50%,-50%);
   }
+
+  .growUpText{
+    font-family: Copperplate;
+    font-size: 12px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50px, -50%);
+}
+
+.p-fixed{
+    position: fixed;
+}
 
 @media (min-width: 1201px) {
 }

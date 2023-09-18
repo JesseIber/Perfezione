@@ -12,11 +12,11 @@ function goToSection(i) {
 
 window.scroll(
     gsap.to('.hscrollLogo', {
-        xPercent: -100,
+        xPercent: -150,
         ease: "none",
         scrollTrigger: {
             trigger: ".hscrollLogo",
-            start: "right center",
+            start: "center",
             scrub: 1
         }
     }),
@@ -25,8 +25,49 @@ window.scroll(
         ease: "none",
         scrollTrigger: {
             trigger: ".hscrollPict",
+            start: "center",
+            scrub: 1,
+        }
+    }),
+
+
+    gsap.from('.growUpText', {
+        ease: "none",
+        opacity: 0,
+        scale: 0,
+        stagger: 0.3,
+        scrollTrigger: {
+            trigger: ".hscrollPict",
+            start: "right center",
+        }
+    }),
+
+    gsap.to('.growUpText', {
+        ease: "none",
+        scale: 3,
+        scrollTrigger: {
+            trigger: ".hscrollPict",
             start: "right center",
             scrub: 1,
         }
-    })
+    }),
+
+    gsap.from('.growUpText', {
+        ease: "none",
+        scale: 3,
+        stagger: 0.3,
+        scrollTrigger: {
+            trigger: ".hscrollPict",
+            start: "right center",
+        }
+    }),
+    gsap.to('.growUpText', {
+        ease: "none",
+        scale: 0,
+        stagger: 0.3,
+        scrollTrigger: {
+            trigger: ".test",
+            start: "center",
+        }
+    }),
 );
