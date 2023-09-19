@@ -12,62 +12,62 @@ function goToSection(i) {
 
 window.scroll(
     gsap.to('.hscrollLogo', {
-        xPercent: -150,
+        xPercent: -190,
         ease: "none",
         scrollTrigger: {
-            trigger: ".hscrollLogo",
-            start: "center",
-            scrub: 1
+            start: "top",
+            end: "center",
+            scrub: 1,
         }
     }),
     gsap.to('.hscrollPict', {
-        xPercent: 100,
+        xPercent: 150,
         ease: "none",
         scrollTrigger: {
-            trigger: ".hscrollPict",
-            start: "center",
+            start: "top",
+            end: "center",
             scrub: 1,
         }
     }),
 
 
-    gsap.from('.growUpText', {
-        ease: "none",
-        opacity: 0,
-        scale: 0,
-        stagger: 0.3,
-        scrollTrigger: {
-            trigger: ".hscrollPict",
-            start: "right center",
-        }
-    }),
+    // gsap.from('.growUpText', {
+    //     ease: "none",
+    //     opacity: 0,
+    //     scale: 0,
+    //     stagger: 0.3,
+    //     scrollTrigger: {
+    //         trigger: ".hscrollPict",
+    //         start: "center",
+    //     }
+    // }),
 
-    gsap.to('.growUpText', {
-        ease: "none",
-        scale: 3,
-        scrollTrigger: {
-            trigger: ".hscrollPict",
-            start: "right center",
-            scrub: 1,
-        }
-    }),
+    // gsap.to('.growUpText', {
+    //     ease: "none",
+    //     scale: 3,
+    //     scrollTrigger: {
+    //         trigger: ".hscrollPict",
+    //         start: "center",
+    //         scrub: 1,
+    //     }
+    // }),
 
-    gsap.from('.growUpText', {
-        ease: "none",
-        scale: 3,
-        stagger: 0.3,
-        scrollTrigger: {
-            trigger: ".hscrollPict",
-            start: "right center",
-        }
-    }),
-    gsap.to('.growUpText', {
-        ease: "none",
-        scale: 0,
-        stagger: 0.3,
-        scrollTrigger: {
-            trigger: ".test",
-            start: "center",
-        }
-    }),
+    // gsap.from('.growUpText', {
+    //     ease: "none",
+    //     scale: 3,
+    //     stagger: 0.3,
+    //     scrollTrigger: {
+    //         trigger: ".hscrollPict",
+    //         start: "center",
+    //     }
+    // }),
+    // gsap.to('.growUpText', {
+    //     ease: "none",
+    //     scale: 0,
+    //     stagger: 0.3,
+    //     scrollTrigger: {
+    //         trigger: ".test",
+    //         start: "center",
+    //     }
+    // }),
 );
