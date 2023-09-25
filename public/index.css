@@ -80,42 +80,39 @@ h1{
     font-size: 110px;
 }
 
-.stage, .ring, .img {
-    width:100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    user-select:none;
-  }
-  
-.stage {
-    overflow:hidden;
-    background:#000;  
-  }
-  
-  div, svg {
-    position: absolute;
-  }
-  
-  .container {
-    perspective: 2000px;
-    width: 300px;
-    height: 400px;  
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-  }
 
-.growUpText{
-    font-family: Copperplate;
-    font-size: 12px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translate(-50px, -50%);
+.card_picture{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
 }
 
-.p-fixed{
+.background_animation{
     position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #a5a5a5;
+    overflow: hidden;
+}
+
+.row{
+    display: flex;
+}
+
+.col{
+    flex-direction: column;
+    flex: 1;
+}
+
+.pictureHero2{
+    position: absolute;
+    bottom: 0;
+    width: 35vw;
+    height: 80vh;
+    object-fit: cover;
 }
 
 @media (min-width: 1201px) {
@@ -125,9 +122,6 @@ h1{
 @media (min-width: 769px) and (max-width: 1200px) {
     .logoImg{
         height: 80vw;
-    }
-    .picture_all{
-        width: 80vw;
     }
     .logoTxt {
         font-size: 10vw;
@@ -139,21 +133,15 @@ h1{
     .logoImg{
         height: 120vw;
     }
-    .picture_all{
-        width: 80vw;
-    }
     .logoTxt {
         font-size: 13vw;
     }
-    .collection_container{
-        flex-direction: column;
-    }
-    .card{
-        margin: 1em;
-        height: auto;
+    .pictureHero2{
+        width: 100vw;
+        height: 52vh;
     }
 }
- 
+
 
 @font-face {
     font-family: Copperplate;

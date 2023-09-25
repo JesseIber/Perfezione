@@ -29,45 +29,21 @@ window.scroll(
             scrub: 1,
         }
     }),
-
-
-    // gsap.from('.growUpText', {
-    //     ease: "none",
-    //     opacity: 0,
-    //     scale: 0,
-    //     stagger: 0.3,
-    //     scrollTrigger: {
-    //         trigger: ".hscrollPict",
-    //         start: "center",
-    //     }
-    // }),
-
-    // gsap.to('.growUpText', {
-    //     ease: "none",
-    //     scale: 3,
-    //     scrollTrigger: {
-    //         trigger: ".hscrollPict",
-    //         start: "center",
-    //         scrub: 1,
-    //     }
-    // }),
-
-    // gsap.from('.growUpText', {
-    //     ease: "none",
-    //     scale: 3,
-    //     stagger: 0.3,
-    //     scrollTrigger: {
-    //         trigger: ".hscrollPict",
-    //         start: "center",
-    //     }
-    // }),
-    // gsap.to('.growUpText', {
-    //     ease: "none",
-    //     scale: 0,
-    //     stagger: 0.3,
-    //     scrollTrigger: {
-    //         trigger: ".test",
-    //         start: "center",
-    //     }
-    // }),
+    gsap.from('.background_animation', {
+        transform: "translate(-50%, -50%)",
+        scale: 0,
+        scrollTrigger: {
+            start: "top",
+            end: "center",
+            scrub: 1,
+        }
+    }),
+    gsap.to('.background_animation', {
+        borderRadius: "0%",
+        scrollTrigger: {
+            start: "top",
+            end: "center",
+            scrub: 1,
+        }
+    }),
 );
